@@ -110,7 +110,7 @@ const HomePage = () => {
               <div className="sub-heading-text">
                 Diyarbakır'ın Eşsiz Lezzeti.
               </div>
-              <a className="order-button" href="/diyarbakir-dibek.html">
+              <a className="order-button" href="/DiayrbakirDibek.js">
                 Hemen Sipariş Ver
               </a>
             </div>
