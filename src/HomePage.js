@@ -19,13 +19,28 @@ const HomePage = () => {
             <a href="#">Ürünlerimiz</a>
             <ul className="dropdown-content">
               <li>
-                <a href="/antep-dibek.html">Antep Dibek</a>
+                <div
+                  className="AntepDibek"
+                  onClick={() => navigate("/AntepDibek")}
+                >
+                  Antep Dibek
+                </div>
               </li>
               <li>
-                <a href="/diyarbakir-dibek.html">Diyarbakır Dibek</a>
+                <div
+                  className="DiyarbakirDibek"
+                  onClick={() => navigate("/DiyarbakirDibek")}
+                >
+                  Diyarbakır Dibek
+                </div>
               </li>
               <li>
-                <a href="/hisarzade.html">Hisarzade</a>
+                <div
+                  className="Hisarzade"
+                  onClick={() => navigate("/Hisaarzade")}
+                >
+                  Hisarzade
+                </div>
               </li>
             </ul>
           </li>
@@ -76,7 +91,7 @@ const HomePage = () => {
               <div className="sub-heading-text">
                 Gaziantep'in Eşsiz Lezzeti.
               </div>
-              <a className="order-button" href="/antep-dibek.html">
+              <a className="order-button" href="/AntepDibek.js">
                 Hemen Sipariş Ver
               </a>
             </div>
