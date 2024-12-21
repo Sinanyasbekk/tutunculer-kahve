@@ -1,0 +1,567 @@
+/* Genel ayarlar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navigasyon Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo img {
+    height: 40px; /* Logo yüksekliği */
+}
+
+.nav-menu {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-menu li {
+    position: relative;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 8px 10px; /* Add padding for spacing */
+}
+
+/* Drop-down Menüler */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    list-style-type: none;
+    padding: 10px 0;
+    z-index: 1;
+    min-width: 200px;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+}
+
+.dropdown-content li {
+    padding: 6px 10px;
+    border-left: 1px solid transparent; /* Border effect */
+    transition: border-color 0.2s ease;
+}
+
+.dropdown-content li:hover {
+    border-left: 4px solid #c257d3; /* Highlight border on hover */
+    background-color: #f8f8f8;
+}
+
+
+/* Navigasyon Iconları */
+.nav-icons ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Spacing between icons */
+    padding: 0;
+    margin: 0;
+}
+
+.nav-icons ul li {
+    display: flex;
+    align-items: center;
+}
+
+.nav-icons ul li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+}
+
+.nav-icons svg {
+    margin-right: 5px; /* Space between icon and text */
+}
+
+.cart-count {
+    background-color: #a1d357; /* Cart count background */
+    color: #fff;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    position: relative;
+    top: -5px; /* Adjust vertical alignment */
+    right: 5px;
+}
+
+.cookie-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ffffff;
+    padding: 15px;
+    text-align: center;
+    z-index: 1000;
+}
+
+.cookie-bar p {
+    display: inline-block;
+    margin: 0;
+}
+
+.cookie-link {
+    color: #a1d357;
+    text-decoration: underline;
+    margin-left: 5px;
+}
+
+.cookie-accept, .cookie-reject {
+    margin-left: 10px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.cookie-accept {
+    background-color: #a1d357; /* Green color */
+    color: #fff;
+}
+
+.cookie-reject {
+    background-color: #d35454; /* Red color */
+    color: #fff;
+}
+
+.cookie-accept:hover {
+    background-color: #88b846; /* Darker green on hover */
+}
+
+.cookie-reject:hover {
+    background-color: #c0392b; /* Darker red on hover */
+}
+
+
+/* Bar Sections */
+.genelbar {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center each section horizontally */
+    gap: 2rem; /* Space between the two sections */
+    padding: 2rem;
+}
+
+/* Styling for Each Bar Section */
+.firstbar, .secondbar {
+    display: flex;
+    align-items: center;
+    background-color: #fa745c; /* Default background color for firstbar */
+    padding: 1rem;
+    width: 100%; /* Set width to limit the section size */
+    max-width: 1200px; /* Optional: set a maximum width */
+    border-radius: 8px; /* Optional: rounded corners */
+}
+
+/* Background color and layout adjustment for second section */
+.secondbar {
+    background-color: #35ee8eb5; /* Set different background color for secondbar */
+    flex-direction: row-reverse; /* Reverse layout for second section */
+}
+
+/* Image Container */
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Text Content */
+.text1 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center-align text */
+    color: #1e3932;
+}
+
+/* Heading Text */
+.heading-text {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #1e3932;
+}
+
+/* Sub-heading Text */
+.sub-heading-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #1e3932;
+}
+
+/* Order Button */
+.order-button {
+    display: inline-block;
+    background-color: transparent;
+    color: #333333;
+    border: 2px solid #333333;
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    text-align: center;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 1rem;
+}
+
+.order-button:hover {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+
+/* www.tutunculerkahve.com/antep-dibek */
+
+/* Main container for the product grid */
+/* Product Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
+    gap: 3rem; /* Space between items */
+    width: 100%;
+    max-width: 1400px;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+/* Product card styling */
+.product-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* Space between content to push text to bottom */
+    height: 500px; /* Increase height for larger cards */
+    width: 100%; /* Ensure full width of grid item */
+}
+
+/* Product image styling */
+.product-card img {
+    width: 350px; /* Increase image size */
+    height: auto;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease; /* Add hover effect for zoom */
+}
+
+/* Product title styling */
+.product-card h2 {
+    font-size: 1.4rem; /* Increase font size */
+    color: #333;
+    font-weight: bold;
+    margin: 2rem 0 0.5rem 0; /* Add margin for spacing */
+}
+
+/* Product description */
+.product-card p {
+    font-size: 1rem;
+    color: #666;
+    margin-top: auto; /* Aligns text at the bottom */
+    padding-top: 1rem; /* Space from the image */
+}
+
+/* Hover effect for product image */
+.product-card:hover img {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+h1 {
+    font-size: 3rem; /* Increase the font size */
+    text-align: center;
+    margin: 2rem 0;
+    color: #0d0d0d; /* Dark gray for a classy look */
+    font-family: 'Playfair Display', serif; /* Use a decorative serif font */
+    font-weight: 700; /* Make it bold */
+    letter-spacing: 2px; /* Add some spacing between letters */
+    line-height: 1.2; /* Adjust line height for better spacing */
+    border-bottom: 2px solid #e0e0e0; /* Subtle underline effect */
+    padding-bottom: 0.5rem; /* Space between text and underline */
+    width: fit-content; /* Ensure the underline fits the text width */
+    margin-left: auto; /* Center it */
+    margin-right: auto;
+}
+
+footer {
+    background-color: #f7f7f7; /* Light background color */
+    padding: 2rem 1rem;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    border-top: 1px solid #e0e0e0;
+}
+
+footer p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+/* Subscription Form Styling */
+#subscription {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+#subscription input[type="email"] {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    width: 200px;
+}
+
+#subscription input[type="submit"] {
+    padding: 0.5rem 1rem;
+    background-color: #a1d357; /* Green background */
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#subscription input[type="submit"]:hover {
+    background-color: #88b846; /* Darker green on hover */
+}
+
+/* Footer Links */
+.footer-links {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.footer-links li {
+    display: inline;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+    color: #a1d357; /* Green color on hover */
+}
+
+
+/* Contact Section */
+.contact-section {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.contact-section h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #4a4a4a;
+}
+
+.contact-section p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+/* Contact Form Styling */
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#contact-form label {
+    text-align: left;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form textarea {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+#contact-form textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+#contact-form input[type="submit"] {
+    padding: 0.8rem;
+    background-color: #a1d357;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#contact-form input[type="submit"]:hover {
+    background-color: #88b846;
+}
+
+/* Footer Styling */
+footer {
+    padding: 1rem;
+    background-color: #f7f7f7;
+    text-align: center;
+    color: #666;
+    font-size: 0.9rem;
+    border-top: 1px solid #e0e0e0;
+}
+
+/* Timeline Section */
+.timeline-section {
+    max-width: 800px;
+    margin: 2rem auto;
+    text-align: center;
+    padding: 2rem;
+}
+
+.timeline-section h1 {
+    font-size: 2.5rem;
+    color: #0c0c0c;
+    margin-bottom: 2rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.timeline {
+    position: relative;
+    margin: 0 auto;
+    padding: 2rem 0;
+    width: 100%;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: #a1d357; /* Timeline line color */
+    transform: translateX(-50%);
+}
+
+/* Timeline Items */
+.timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+    text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+    text-align: left;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: #a1d357;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+/* Timeline Content */
+.timeline-content {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 2;
+}
+
+.timeline-content h2 {
+    font-size: 1.5rem;
+    color: #181818;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-content p {
+    font-size: 1rem;
+    color: #0b0b0b;
+}
+
+/* Footer */
+footer {
+    padding: 1rem;
+    background-color: #f7f7f7;
+    text-align: center;
+    color: #6b6969;
+    font-size: 0.9rem;
+    border-top: 1px solid #e0e0e0;
+}
