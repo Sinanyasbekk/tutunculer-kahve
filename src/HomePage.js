@@ -1,162 +1,117 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
-import "./asdfg.css";
+import Header from "./Header"; // Standard import
+import { Link } from "react-router-dom"; // Replace next/link
+import "./Styles/HomePage.css";
+import "./Styles/Footer.css";
 
 const HomePage = () => {
-  const navigate = useNavigate();
-
   return (
-    <div>
-      <nav className="navbar">
-        <div className="logo">
-          <img src="logo.png" alt="Tütüncüler Kahve" />
-        </div>
-        <ul className="nav-menu">
-          <li>
-            <a href="#">Ana Sayfa</a>
-          </li>
-          <li className="dropdown">
-            <a href="#">Ürünlerimiz</a>
-            <ul className="dropdown-content">
-              <li>
-                <div
-                  className="AntepDibek"
-                  onClick={() => navigate("/AntepDibek")}
-                >
-                  Antep Dibek
-                </div>
-              </li>
-              <li>
-                <div
-                  className="DiyarbakirDibek"
-                  onClick={() => navigate("/DiyarbakirDibek")}
-                >
-                  Diyarbakır Dibek
-                </div>
-              </li>
-              <li>
-                <div
-                  className="Hisarzade"
-                  onClick={() => navigate("/Hisaarzade")}
-                >
-                  Hisarzade
-                </div>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="urun_katalogu.pdf" target="_blank">
-              Ürün Kataloğu
-            </a>
-          </li>
-          <li>
-            <a href="/hakkimizda.html">Hakkımızda</a>
-          </li>
-          <li>
-            <a href="/bize-ulasin.html">Bize Ulaşın</a>
-          </li>
-        </ul>
-        <div className="nav-icons">
-          <ul>
-            <li>
-              <a href="#">
-                <i className="bi bi-search"></i>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i className="bi bi-person-fill"></i>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i className="bi bi-basket"></i>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+    <div className="min-h-screen flex flex-col">
+      <Header />
 
-      {/* Main Sections */}
-      <div className="genelbar">
-        <div className="firstbar">
-          <div className="image-container">
-            <img src="antdibek.png" alt="Drink Image 1" className="block" />
-          </div>
-          <div className="text1">
-            <div className="content-block">
-              <h1 className="heading-text" tabindex="-1">
-                <span className="rich-text">Bir Gaziantep Markasıdır</span>
-              </h1>
-              <div className="sub-heading-text">
-                Gaziantep'in Eşsiz Lezzeti.
+      {/* Main content */}
+      <main>
+        {/* Gaziantep Section */}
+        <section className="section" style={{ backgroundColor: "#ff7f6e" }}>
+          <div className="container">
+            <div className="flex-container">
+              <div className="image-container">
+                <img
+                  src="/placeholder.svg"
+                  alt="Drink Image 1"
+                  width={400}
+                  height={400}
+                  style={{ borderRadius: "0.5rem" }}
+                />
               </div>
-              <a className="order-button" href="/AntepDibek.js">
-                Hemen Sipariş Ver
-              </a>
+              <div className="content-container">
+                <h1 className="title">Bir Gaziantep Markasıdır</h1>
+                <p className="subtitle">Gaziantep'in Eşsiz Lezzeti.</p>
+                <button className="button">Hemen Sipariş Ver</button>
+              </div>
             </div>
           </div>
-        </div>
+        </section>
 
-        <div className="secondbar">
-          <div className="image-container">
-            <img src="dbakirdibek.png" alt="Drink Image 2" className="block" />
-          </div>
-          <div className="text1">
-            <div className="content-block">
-              <h1 className="heading-text" tabindex="-1">
-                <span className="rich-text">Bir Diyarbakır Markasıdır</span>
-              </h1>
-              <div className="sub-heading-text">
-                Diyarbakır'ın Eşsiz Lezzeti.
+        {/* Diyarbakir Section */}
+        <section className="section" style={{ backgroundColor: "#90EE90" }}>
+          <div className="container">
+            <div className="flex-container">
+              <div className="content-container left">
+                <h2 className="title">Bir Diyarbakır Markasıdır</h2>
+                <p className="subtitle">Diyarbakir'in Eşsiz Lezzeti.</p>
+                <button className="button">Hemen Sipariş Ver</button>
               </div>
-              <a className="order-button" href="/DiayrbakirDibek.js">
-                Hemen Sipariş Ver
-              </a>
+              <div className="image-container">
+                <img
+                  src="/placeholder.svg"
+                  alt="Drink Image 2"
+                  width={400}
+                  height={400}
+                  style={{ borderRadius: "0.5rem" }}
+                />
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-
-      {/* Cookie Bar */}
-      <div className="cookie-bar" id="cookie-bar">
-        <p>
-          Web sitemiz, en iyi deneyimi sunmak için çerezler kullanmaktadır.
-          <a href="#" className="cookie-link">
-            Daha fazla bilgi
-          </a>
-        </p>
-        <button className="cookie-accept" onClick="{acceptCookies}">
-          Kabul Et
-        </button>
-        <button className="cookie-reject" onClick="{rejectCookies}">
-          Reddet
-        </button>
-      </div>
+        </section>
+      </main>
 
       {/* Footer */}
-      <footer>
-        <p>Tüm hakları saklıdır. © 2012–2024 Tütüncüler Kahve</p>
-        <form id="subscription" method="POST">
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Bültene kaydolun"
-            required
-          />
-          <input type="submit" name="submit" value="Kaydol" />
-        </form>
-        <ul className="footer-links">
-          <li>
-            <a href="/kisisel-verilerin-korunmasi">
+      <footer className="footer">
+        <div className="footer-container">
+          <div className="copyright">
+            <p>Tüm hakları saklıdır. © 2012–2024 Tütüncüler Kahve</p>
+          </div>
+
+          <div className="newsletter">
+            <input
+              type="email"
+              placeholder="Bültene kaydolun"
+              className="input"
+            />
+            <button className="button" style={{ backgroundColor: "#90EE90" }}>
+              Kaydol
+            </button>
+          </div>
+
+          <div className="footer-links">
+            <Link to="/privacy" className="footer-link">
               Kişisel Verilerin Korunması
-            </a>
-          </li>
-          <li>
-            <a href="/insan-kaynaklari">İnsan Kaynakları</a>
-          </li>
-        </ul>
+            </Link>
+            <Link to="/hr" className="footer-link">
+              İnsan Kaynakları
+            </Link>
+          </div>
+        </div>
+
+        {/* Cookie Consent Banner */}
+        <div className="cookie-banner">
+          <div className="cookie-container">
+            <p>
+              Web sitemiz, en iyi deneyimi sunmak için çerezler kullanmaktadır.{" "}
+              <Link
+                to="/privacy"
+                style={{ color: "#90EE90", textDecoration: "underline" }}
+              >
+                Daha fazla bilgi
+              </Link>
+            </p>
+            <div className="cookie-buttons">
+              <button
+                className="button"
+                style={{ backgroundColor: "#90EE90", color: "black" }}
+              >
+                Kabul Et
+              </button>
+              <button
+                className="button"
+                style={{ borderColor: "white", color: "white" }}
+              >
+                Reddet
+              </button>
+            </div>
+          </div>
+        </div>
       </footer>
     </div>
   );

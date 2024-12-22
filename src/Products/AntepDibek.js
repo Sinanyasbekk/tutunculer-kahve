@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "./asdfg.css";
+import "../Styles/asdfg.css";
 
 const AntepDibek = () => {
   const navigate = useNavigate();

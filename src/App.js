@@ -2,9 +2,9 @@ import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./HomePage";
-import AntepDibek from "./AntepDibek";
-import DiyarbakirDibek from "./DiyarbakirDibek";
-import Hisarzade from "./Hisarzade";
+import AntepDibek from "./Products/AntepDibek";
+import DiyarbakirDibek from "./Products/DiyarbakirDibek";
+import Hisarzade from "./Products/Hisarzade";
 
 function App() {
   return (

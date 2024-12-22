@@ -1,5 +1,5 @@
 import React from "react";
-import "./asdfg.css";
+import "../Styles/asdfg.css";
 import { useNavigate } from "react-router-dom";
 
 const DiyarbakirDibek = () => {
