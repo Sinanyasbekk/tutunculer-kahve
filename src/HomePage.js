@@ -44,7 +44,7 @@ const HomePage = () => {
               </div>
               <div className="image-container">
                 <img
-                  src="/placeholder.svg"
+                  src="/Images/dbakirdibek.png"
                   alt="Drink Image 2"
                   width={400}
                   height={400}
