@@ -37,7 +37,8 @@ const Header = () => {
       {/* Hero section with background image */}
       <div className="hero">
         <img
-          src="/placeholder.svg"
+          width={100}
+          height={100}
           alt="Coffee with latte art"
           className="hero-image"
         />
