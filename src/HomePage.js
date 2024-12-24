@@ -3,6 +3,8 @@ import Header from "./Header"; // Standard import
 import { Link } from "react-router-dom"; // Replace next/link
 import "./Styles/HomePage.css";
 import "./Styles/Footer.css";
+import antdibek from "./Images/antdibek.png";
+import moduleName from "module";
 
 const HomePage = () => {
   return (
@@ -19,8 +21,8 @@ const HomePage = () => {
                 <img
                   src="/placeholder.svg"
                   alt="Drink Image 1"
-                  width={400}
-                  height={400}
+                  width={200}
+                  height={200}
                   style={{ borderRadius: "0.5rem" }}
                 />
               </div>
@@ -38,16 +40,16 @@ const HomePage = () => {
           <div className="container">
             <div className="flex-container">
               <div className="content-container left">
-                <h2 className="title">Bir Diyarbakır Markasıdır</h2>
+                <h1 className="title">Bir Diyarbakır Markasıdır</h1>
                 <p className="subtitle">Diyarbakir'in Eşsiz Lezzeti.</p>
                 <button className="button">Hemen Sipariş Ver</button>
               </div>
               <div className="image-container">
                 <img
-                  src="/Images/dbakirdibek.png"
+                  src={antdibek}
                   alt="Drink Image 2"
-                  width={400}
-                  height={400}
+                  width={200}
+                  height={200}
                   style={{ borderRadius: "0.5rem" }}
                 />
               </div>
