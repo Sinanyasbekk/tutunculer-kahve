@@ -1,10 +1,10 @@
 .header {
   position: relative;
-  /* background-image: url("https://ideacdn.net/idea/li/11/myassets/blogs/blog-13.jpg?revision=1674215415"); Use the logo as the background */
+  background-image: url("https://cdn.dsmcdn.com/mrktng/seo/22nisan4/kafeinsiz-kahve-4.jpg");
   background-size: contain;
-  background-position: center; /* Center the background */
-  background-attachment: fixed; /* Keep the background fixed while scrolling */
-  height: 50vh; /* Full-screen height for the header */
+  background-position: 50;
+  background-attachment: fixed;
+  height: 60vh;
 
   display: flex;
   flex-direction: column;
@@ -60,7 +60,7 @@
 .logo img {
   width: 100px; /* Set a fixed width */
   height: auto; /* Maintain aspect ratio */
-  object-fit: contain; /* Ensure the image fits without distortion */
+  object-fit: contain;
 }
 
 .nav-links {
@@ -76,7 +76,7 @@
 }
 
 .nav-links a {
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   text-decoration: none;
 }
 
@@ -125,9 +125,9 @@
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(255, 0, 0, 0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   border-radius: 4px;
 }
@@ -137,12 +137,12 @@
 }
 
 .dropdown-item {
-  color: black;
+  color: rgb(117, 103, 103);
   padding: 12px 16px;
   text-decoration: none;
   display: block;
 }
 
 .dropdown-item:hover {
-  background-color: #000000;
+  background-color: #4f4a4a;
 }
