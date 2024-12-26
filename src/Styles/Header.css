@@ -1,5 +1,14 @@
 .header {
   position: relative;
+  /* background-image: url("https://ideacdn.net/idea/li/11/myassets/blogs/blog-13.jpg?revision=1674215415"); Use the logo as the background */
+  background-size: contain;
+  background-position: center; /* Center the background */
+  background-attachment: fixed; /* Keep the background fixed while scrolling */
+  height: 50vh; /* Full-screen height for the header */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .language-selector {
@@ -43,6 +52,15 @@
   font-size: 1.5rem;
   font-weight: bold;
   text-decoration: none;
+  display: flex; /* To allow alignment with the logo image */
+  align-items: center;
+  gap: 0.5rem; /* Add spacing between the logo image and text */
+}
+
+.logo img {
+  width: 100px; /* Set a fixed width */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensure the image fits without distortion */
 }
 
 .nav-links {
@@ -58,7 +76,7 @@
 }
 
 .nav-links a {
-  color: white;
+  color: rgb(0, 0, 0);
   text-decoration: none;
 }
 
@@ -68,14 +86,10 @@
 
 .hero {
   position: relative;
-  height: 400px;
-}
-
-.hero-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(0.75);
+  height: 100%; /* Ensure hero section matches the header height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-content {
@@ -90,7 +104,7 @@
 }
 
 .hero-title {
-  color: white;
+  color: rgb(255, 255, 255);
   font-size: 3.75rem;
   font-weight: bold;
   margin-bottom: 1rem;
@@ -101,5 +115,34 @@
 }
 
 .breadcrumb a:hover {
-  color: white;
+  color: rgb(255, 255, 255);
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgb(0, 0, 0);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(255, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 4px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-item {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-item:hover {
+  background-color: #000000;
 }

@@ -14,7 +14,7 @@ const HomePage = () => {
       {/* Main content */}
       <main>
         {/* Gaziantep Section */}
-        <section className="section" style={{ backgroundColor: "#ff7f6e" }}>
+        <section className="section" style={{ backgroundColor: "#f4edd3" }}>
           <div className="container">
             <div className="flex-container">
               <div className="image-container">
@@ -27,7 +27,7 @@ const HomePage = () => {
                 />
               </div>
               <div className="content-container">
-                <h1 className="title">Bir Denizli Markasıdır</h1>
+                <h1 className="title">Bir Gaziantep Markasıdır</h1>
                 <p className="subtitle">Gaziantep'in Eşsiz Lezzeti.</p>
                 <button className="button">Hemen Sipariş Ver</button>
               </div>
@@ -36,11 +36,11 @@ const HomePage = () => {
         </section>
 
         {/* Diyarbakir Section */}
-        <section className="section" style={{ backgroundColor: "#fff" }}>
+        <section className="section" style={{ backgroundColor: "#d8c4b6" }}>
           <div className="container">
             <div className="flex-container">
               <div className="content-container left">
-                <h1 className="title">Bir Denizli Markasıdır</h1>
+                <h1 className="title">Bir Diyarbakır Markasıdır</h1>
                 <p className="subtitle">Diyarbakir'in Eşsiz Lezzeti.</p>
                 <button className="button">Hemen Sipariş Ver</button>
               </div>
