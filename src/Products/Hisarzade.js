@@ -2,14 +2,10 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import "../Styles/antepdibek.css";
 import Header from "../Header";
-import d1 from "../Images/d1.png";
-import d2 from "../Images/d2.png";
-import d3 from "../Images/d3.png";
-import d4 from "../Images/d4.png";
-import dd1 from "../Images/dd1.png";
-import dd2 from "../Images/dd2.png";
-import dd3 from "../Images/dd3.png";
-import dd4 from "../Images/dd4.png";
+import h1 from "../Images/h1.jpeg";
+import h2 from "../Images/h2.jpeg";
+import h3 from "../Images/h3.jpeg";
+import h4 from "../Images/h4.png";
 
 const Hisarzade = () => {
   const navigate = useNavigate();
@@ -17,59 +13,31 @@ const Hisarzade = () => {
   const products = [
     {
       id: 1,
-      name: "Diyarbakır Dibek",
+      name: "Hisarzade",
       price: "$10",
-      category: "Dibek Kahvesi Oturan Poşet",
-      imageUrl: d1,
+      category: "Hisarzade Kahve Kreması",
+      imageUrl: h1,
     },
     {
       id: 2,
-      name: "Diyarbakır Dibek",
-      category: "Menengiç Kahvesi",
+      name: "Hisarzade",
+      category: "Hisarzade Gold Kahve",
       price: "$15",
-      imageUrl: d2,
+      imageUrl: h2,
     },
     {
       id: 3,
-      name: "Diyarbakır Dibek",
+      name: "Hisarzade",
       price: "$20",
-      category: "Fındık Parçacıklı Dibek Kahvesi",
-      imageUrl: d3,
+      category: "Hisarzade Türk Kahvesi",
+      imageUrl: h3,
     },
     {
       id: 4,
-      name: "Diyarbakır Dibek",
+      name: "Hisarzade",
       price: "$25",
-      category: "Antep Fıstığı Parçacıklı Dibek Kahvesi",
-      imageUrl: d4,
-    },
-    {
-      id: 5,
-      name: "Diyarbakır Dibek",
-      price: "$30",
-      category: "Dibek Kahvesi Silindir Paket",
-      imageUrl: dd1,
-    },
-    {
-      id: 6,
-      name: "Diyarbakır Dibek",
-      price: "$35",
-      category: "Menengiç Kahvesi Silindir Paket",
-      imageUrl: dd2,
-    },
-    {
-      id: 7,
-      name: "Diyarbakır Dibek",
-      price: "$40",
-      category: "Fındık Parçacıklı Dibek Kahvesi Silindir Paket",
-      imageUrl: dd3,
-    },
-    {
-      id: 8,
-      name: "Diyarbakır Dibek",
-      price: "$45",
-      category: "Damla Sakızlı Dibek Kahvesi Silindir Paket",
-      imageUrl: dd4,
+      category: "Hisarzade Menengiç Kahvesi",
+      imageUrl: h4,
     },
   ];
 
