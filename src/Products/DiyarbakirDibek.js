@@ -11,7 +11,7 @@ import dd2 from "../Images/dd2.png";
 import dd3 from "../Images/dd3.png";
 import dd4 from "../Images/dd4.png";
 
-const AntepDibek = () => {
+const DiyarbakirDibek = () => {
   const navigate = useNavigate();
 
   const products = [
@@ -114,4 +114,4 @@ const AntepDibek = () => {
   );
 };
 
-export default AntepDibek;
+export default DiyarbakirDibek;
