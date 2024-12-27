@@ -50,8 +50,8 @@ const Header = () => {
               </div>
             </div>
 
-            <Link to="/online-magaza">HAKKIMIZDA</Link>
-            <Link to="/kesfet">BİZE ULAŞIN</Link>
+            <Link to="/Hakkimizda">HAKKIMIZDA</Link>
+            <Link to="/BizeUlasin">BİZE ULAŞIN</Link>
           </nav>
         </div>
       </div>

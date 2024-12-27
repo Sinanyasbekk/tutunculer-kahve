@@ -28,7 +28,6 @@ const AntepDibek = () => {
       name: "Antep Dibek",
       category: "Fındık Parçacıklı Dibek Kahvesi",
       price: "$15",
-
       imageUrl: a2,
     },
     {
