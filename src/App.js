@@ -7,6 +7,7 @@ import DiyarbakirDibek from "./Products/DiyarbakirDibek";
 import Hisarzade from "./Products/Hisarzade";
 import Header from "./Header";
 import Hakkimizda from "./Hakkimizda";
+import BizeUlasin from "./BizeUlasin";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/DiyarbakirDibek" element={<DiyarbakirDibek />} />
           <Route path="/Hisarzade" element={<Hisarzade />} />
           <Route path="/Hakkimizda" element={<Hakkimizda />} />
+          <Route path="/BizeUlasin" element={<BizeUlasin />} />
           <Route path="/Header" element={<Header />} />
           <Route path="/" element={<HomePage />} />
         </Routes>
