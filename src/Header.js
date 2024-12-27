@@ -24,7 +24,7 @@ const Header = () => {
           </Link>
 
           <nav className="nav-links">
-            <Link to="./HomePage">ANASAYFA</Link>
+            <div onClick={() => navigate("/")}>ANA SAYFA</div>
 
             <div className="dropdown">
               <Link href="Products">ÜRÜNLERİMİZ</Link>
