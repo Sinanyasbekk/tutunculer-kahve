@@ -11,21 +11,24 @@
   justify-content: space-between;
 }
 
-.language-selector {
+.social-links {
   position: absolute;
   top: 0;
   right: 0;
   z-index: 20;
   padding: 1rem;
-  color: white;
+  display: flex;
+  gap: 1rem;
 }
 
-.language-selector a {
+.social-links a {
   color: white;
+  font-size: 1.5rem;
   text-decoration: none;
+  transition: color 0.3s ease-in-out;
 }
 
-.language-selector a:hover {
+.social-links a:hover {
   color: rgb(209 213 219);
 }
 

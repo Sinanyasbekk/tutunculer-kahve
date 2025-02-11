@@ -1,17 +1,21 @@
 .section {
   width: 100%;
-
-  padding: 3rem 0;
+  padding: 4rem 0;
 }
-
+@media (min-width: 768px) {
+  .section {
+    padding: 2rem 0; /* Further increase size on larger screens */
+  }
+}
 .container {
-  max-width: 1280px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 0 1rem;
 }
 
 .flex-container {
   display: flex;
+
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
