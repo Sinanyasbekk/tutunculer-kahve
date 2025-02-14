@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -16,7 +16,8 @@ import aa4 from "../Images/aa4.png";
 
 const AntepDibek = () => {
   const navigate = useNavigate();
-
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedImages, setSelectedImages] = useState([]);
   const settings = {
     dots: true,
     infinite: true,
@@ -25,7 +26,14 @@ const AntepDibek = () => {
     slidesToScroll: 1,
     arrows: true,
   };
+  const openModal = (images) => {
+    setSelectedImages(images);
+    setIsModalOpen(true);
+  };
 
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
   // Sample product data with images
   const products = [
     {
@@ -88,7 +96,11 @@ const AntepDibek = () => {
               <div className="ibox-content product-box">
                 <Slider {...settings}>
                   {product.images.map((image, index) => (
-                    <div key={index} className="product-image">
+                    <div
+                      key={index}
+                      className="product-image"
+                      onClick={() => openModal(product.images)}
+                    >
                       <img
                         src={image}
                         alt={product.name}
@@ -98,6 +110,7 @@ const AntepDibek = () => {
                   ))}
                 </Slider>
                 <div className="product-desc">
+                  <span className="product-price">{product.price}</span>
                   <a href="#" className="product-name">
                     {product.name}
                   </a>
@@ -108,6 +121,22 @@ const AntepDibek = () => {
           </div>
         ))}
       </div>
+      {isModalOpen && (
+        <div className="modal-overlay" onClick={closeModal}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="modal-close-button" onClick={closeModal}>
+              ×
+            </button>
+            <Slider {...settings}>
+              {selectedImages.map((image, index) => (
+                <div key={index} className="modal-image">
+                  <img src={image} alt="Product" />
+                </div>
+              ))}
+            </Slider>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

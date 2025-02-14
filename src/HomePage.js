@@ -14,64 +14,63 @@ const HomePage = () => {
       {/* Main content */}
       <main>
         {/* Gaziantep Section */}
-        <section className="section" style={{ backgroundColor: "#35ee8eb5" }}>
-          <div className="container">
+        <section className="section">
+          <div className="container" style={{ backgroundColor: "#35ee8eb5" }}>
             <div className="flex-container">
               <div className="image-container">
                 <img
                   src={antdibek}
                   alt="Drink Image 1"
-                  width={300}
-                  height={300}
+                  width={200}
+                  height={200}
                   style={{ borderRadius: "0.5rem" }}
                 />
               </div>
               <div className="content-container">
                 <h1 className="title">Bir Gaziantep Markasıdır</h1>
                 <p className="subtitle">Gaziantep'in Eşsiz Lezzeti.</p>
-                <button className="button">Hemen Sipariş Ver</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Gaziantep Section */}
+        <section className="section">
+          <div className="container" style={{ backgroundColor: "#35ee8eb5" }}>
+            <div className="flex-container">
+              <div className="content-container left">
+                <h1 className="title">Bir Gaziantep Markasıdır</h1>
+                <p className="subtitle">Gaziantep'in Eşsiz Lezzeti.</p>
+              </div>
+              <div className="image-container">
+                <img
+                  src={antdibek}
+                  alt="Drink Image 1"
+                  width={200}
+                  height={200}
+                  style={{ borderRadius: "0.5rem" }}
+                />
               </div>
             </div>
           </div>
         </section>
 
         {/* Diyarbakir Section */}
-        <section className="section" style={{ backgroundColor: "#d8c4b6" }}>
-          <div className="container">
+        <section className="section">
+          <div className="container" style={{ backgroundColor: "#d8c4b6" }}>
             <div className="flex-container">
-              <div className="content-container left">
-                <h1 className="title">Bir Diyarbakır Markasıdır</h1>
-                <p className="subtitle">Diyarbakir'in Eşsiz Lezzeti.</p>
-                <button className="button">Hemen Sipariş Ver</button>
-              </div>
               <div className="image-container">
                 <img
                   src={dbakirdibek}
                   alt="Drink Image 2"
-                  width={300}
-                  height={300}
-                  style={{ borderRadius: "0.5rem" }}
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-        <section className="section" style={{ backgroundColor: "#35ee8eb5" }}>
-          <div className="container">
-            <div className="flex-container">
-              <div className="image-container">
-                <img
-                  src={antdibek}
-                  alt="Drink Image 1"
-                  width={300}
-                  height={300}
+                  width={200}
+                  height={200}
                   style={{ borderRadius: "0.5rem" }}
                 />
               </div>
               <div className="content-container">
-                <h1 className="title">Bir Gaziantep Markasıdır</h1>
-                <p className="subtitle">Gaziantep'in Eşsiz Lezzeti.</p>
-                <button className="button">Hemen Sipariş Ver</button>
+                <h1 className="title">Bir Diyarbakır Markasıdır</h1>
+                <p className="subtitle">Diyarbakir'in Eşsiz Lezzeti.</p>
               </div>
             </div>
           </div>
@@ -84,29 +83,9 @@ const HomePage = () => {
           <div className="copyright">
             <p>Tüm hakları saklıdır. © 2012–2024 Tütüncüler Kahve</p>
           </div>
-
-          <div className="newsletter">
-            <input
-              type="email"
-              placeholder="Bültene kaydolun"
-              className="input"
-            />
-            <button className="button" style={{ backgroundColor: "#90EE90" }}>
-              Kaydol
-            </button>
-          </div>
-
-          <div className="footer-links">
-            <Link to="/privacy" className="footer-link">
-              Kişisel Verilerin Korunması
-            </Link>
-            <Link to="/hr" className="footer-link">
-              İnsan Kaynakları
-            </Link>
-          </div>
         </div>
 
-        {/* Cookie Consent Banner */}
+        {/* Cookie Consent Banner
         <div className="cookie-banner">
           <div className="cookie-container">
             <p>
@@ -133,7 +112,7 @@ const HomePage = () => {
               </button>
             </div>
           </div>
-        </div>
+        </div> */}
       </footer>
     </div>
   );

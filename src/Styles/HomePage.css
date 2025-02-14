@@ -1,5 +1,6 @@
 .section {
-  width: 100%;
+  width: 70%;
+  height: 50vh;
   padding: 4rem 0;
 }
 @media (min-width: 768px) {
@@ -8,14 +9,17 @@
   }
 }
 .container {
-  max-width: 800px;
+  position: relative;
+  left: 20%;
+  height: 30vh;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 2rem 0;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 10px;
 }
 
 .flex-container {
   display: flex;
-
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
@@ -28,6 +32,11 @@
 }
 
 .image-container {
+  position: relative;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
   width: 100%;
   margin-bottom: 2rem;
 }
@@ -47,7 +56,7 @@
 @media (min-width: 768px) {
   .content-container {
     width: 50%;
-    text-align: right;
+    text-align: center;
   }
 
   .content-container.left {
@@ -56,7 +65,7 @@
 }
 
 .title {
-  font-size: 2.25rem;
+  font-size: 2rem;
   font-weight: bold;
   margin-bottom: 1rem;
 }
@@ -70,16 +79,6 @@
 .subtitle {
   font-size: 1.25rem;
   margin-bottom: 1.5rem;
-}
-
-.button {
-  background: transparent;
-  border: 2px solid rgb(0, 0, 0);
-  color: black;
-  padding: 0.5rem 2rem;
-  border-radius: 9999px;
-  cursor: pointer;
-  transition: background-color 0.2s;
 }
 
 .button:hover {
