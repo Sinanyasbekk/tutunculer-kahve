@@ -96,12 +96,13 @@ const Hisarzade = () => {
       {isModalOpen && (
         <div className="modal-overlay" onClick={closeModal}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <Slider {...settings} key={isModalOpen}>
-              {" "}
-              {/* Force re-render */}
+            <button className="modal-close-button" onClick={closeModal}>
+              ×
+            </button>
+            <Slider {...settings}>
               {selectedImages.map((image, index) => (
                 <div key={index} className="modal-image">
-                  <img src={image} alt="Product" className="product-img" />
+                  <img src={image} alt="Product" />
                 </div>
               ))}
             </Slider>
