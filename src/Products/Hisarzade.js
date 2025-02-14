@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "../Styles/antepdibek.css";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import "../Styles/products.css";
 import Header from "../Header";
 import h1 from "../Images/h1.jpeg";
 import h2 from "../Images/h2.jpeg";
@@ -10,34 +13,48 @@ import h4 from "../Images/h4.png";
 const Hisarzade = () => {
   const navigate = useNavigate();
 
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedImages, setSelectedImages] = useState([]);
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+  };
+  const openModal = (images) => {
+    setSelectedImages(images);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
   const products = [
     {
       id: 1,
       name: "Hisarzade",
-      price: "$10",
       category: "Hisarzade Kahve Kreması",
-      imageUrl: h1,
+      images: [h1, h1],
     },
     {
       id: 2,
       name: "Hisarzade",
       category: "Hisarzade Gold Kahve",
-      price: "$15",
-      imageUrl: h2,
+      images: [h2, h2],
     },
     {
       id: 3,
       name: "Hisarzade",
-      price: "$20",
       category: "Hisarzade Türk Kahvesi",
-      imageUrl: h3,
+      images: [h3, h3],
     },
     {
       id: 4,
       name: "Hisarzade",
-      price: "$25",
       category: "Hisarzade Menengiç Kahvesi",
-      imageUrl: h4,
+      images: [h4, h4],
     },
   ];
 
@@ -49,35 +66,48 @@ const Hisarzade = () => {
           <div className="col-md-3" key={product.id}>
             <div className="ibox">
               <div className="ibox-content product-box">
-                <div className="product-image">
-                  <img
-                    src={product.imageUrl}
-                    alt={product.name}
-                    className="product-img"
-                  />
-                </div>
+                <Slider {...settings}>
+                  {product.images.map((image, index) => (
+                    <div
+                      key={index}
+                      className="product-image"
+                      onClick={() => openModal(product.images)}
+                    >
+                      <img
+                        src={image}
+                        alt={product.name}
+                        className="product-img"
+                      />
+                    </div>
+                  ))}
+                </Slider>
                 <div className="product-desc">
                   <span className="product-price">{product.price}</span>
-
                   <a href="#" className="product-name">
                     {product.name}
                   </a>
                   <small className="text-muted">{product.category}</small>
-                  <div className="m-t text-righ">
-                    <a
-                      href="#"
-                      className="btn btn-xs btn-outline btn-primary"
-                      onClick={() => navigate(`/product/${product.id}`)}
-                    >
-                      Info <i className="fa fa-long-arrow-right"></i>
-                    </a>
-                  </div>
                 </div>
               </div>
             </div>
           </div>
         ))}
       </div>
+      {isModalOpen && (
+        <div className="modal-overlay" onClick={closeModal}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <Slider {...settings} key={isModalOpen}>
+              {" "}
+              {/* Force re-render */}
+              {selectedImages.map((image, index) => (
+                <div key={index} className="modal-image">
+                  <img src={image} alt="Product" className="product-img" />
+                </div>
+              ))}
+            </Slider>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

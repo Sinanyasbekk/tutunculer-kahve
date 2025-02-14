@@ -20,7 +20,7 @@ const Hakkimizda = () => {
           </div>
         </div>
         <div className="timeline-item">
-          <div className="timeline-content">
+          <div className="timeline-content1">
             <h3>Daha Sonra</h3>
             <p>
               Gaziantep’in önde gelen şekerleme markalarından birisi olan Yıldız
@@ -40,7 +40,7 @@ const Hakkimizda = () => {
           </div>
         </div>
         <div className="timeline-item">
-          <div className="timeline-content">
+          <div className="timeline-content1">
             <h3>Günümüzde</h3>
             <p>
               Güzel Türkiye’mizin otantik kahve tatlarını Antep Dibek,
