@@ -84,35 +84,6 @@ const HomePage = () => {
             <p>Tüm hakları saklıdır. © 2012–2024 Tütüncüler Kahve</p>
           </div>
         </div>
-
-        {/* Cookie Consent Banner
-        <div className="cookie-banner">
-          <div className="cookie-container">
-            <p>
-              Web sitemiz, en iyi deneyimi sunmak için çerezler kullanmaktadır.{" "}
-              <Link
-                to="/privacy"
-                style={{ color: "#90EE90", textDecoration: "underline" }}
-              >
-                Daha fazla bilgi
-              </Link>
-            </p>
-            <div className="cookie-buttons">
-              <button
-                className="button"
-                style={{ backgroundColor: "#90EE90", color: "black" }}
-              >
-                Kabul Et
-              </button>
-              <button
-                className="button"
-                style={{ borderColor: "white", color: "white" }}
-              >
-                Reddet
-              </button>
-            </div>
-          </div>
-        </div> */}
       </footer>
     </div>
   );
