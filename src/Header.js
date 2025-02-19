@@ -9,6 +9,11 @@ const Header = () => {
 
   return (
     <header className="header">
+      <div className="top-banner">
+        <div className="sliding-text">
+          <p>DOĞAL VE KATKISIZ ÜRETİM</p>
+        </div>
+      </div>
       <div className="social-links">
         <a
           href="https://www.instagram.com/tutunculerkahve/?hl=tr"
@@ -39,7 +44,7 @@ const Header = () => {
             <div onClick={() => navigate("/")}>ANA SAYFA</div>
 
             <div className="dropdown">
-              <Link to="/Products">ÜRÜNLERİMİZ</Link>
+              <Link>ÜRÜNLERİMİZ</Link>
               <div className="dropdown-content">
                 <div
                   className="dropdown-item"
@@ -65,6 +70,11 @@ const Header = () => {
             <Link to="/Hakkimizda">HAKKIMIZDA</Link>
             <Link to="/BizeUlasin">BİZE ULAŞIN</Link>
           </nav>
+        </div>
+      </div>
+      <div className="bottom-banner">
+        <div className="sliding-text">
+          <p>TÜTÜNCÜLER KAHVE KALİTESİ İLE EŞSİZ LEZZETLER</p>
         </div>
       </div>
     </header>
