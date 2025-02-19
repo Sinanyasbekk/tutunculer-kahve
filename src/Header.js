@@ -12,6 +12,11 @@ const Header = () => {
       <div className="top-banner">
         <div className="sliding-text">
           <p>DOĞAL VE KATKISIZ ÜRETİM</p>
+          <p>ÖZENLE SEÇİLMİŞ KAHVE ÇEKİRDEKLERİ</p>
+          <p>DOĞAL VE KATKISIZ ÜRETİM</p>
+          <p>ÖZENLE SEÇİLMİŞ KAHVE ÇEKİRDEKLERİ</p>
+          <p>DOĞAL VE KATKISIZ ÜRETİM</p>
+          <p>ÖZENLE SEÇİLMİŞ KAHVE ÇEKİRDEKLERİ</p>
         </div>
       </div>
       <div className="social-links">
@@ -75,6 +80,11 @@ const Header = () => {
       <div className="bottom-banner">
         <div className="sliding-text">
           <p>TÜTÜNCÜLER KAHVE KALİTESİ İLE EŞSİZ LEZZETLER</p>
+          <p>GURME LEZZETLER SİZİ BEKLİYOR</p>
+          <p>TÜTÜNCÜLER KAHVE KALİTESİ İLE EŞSİZ LEZZETLER</p>
+          <p>GURME LEZZETLER SİZİ BEKLİYOR</p>
+          <p>TÜTÜNCÜLER KAHVE KALİTESİ İLE EŞSİZ LEZZETLER</p>
+          <p>GURME LEZZETLER SİZİ BEKLİYOR</p>
         </div>
       </div>
     </header>
