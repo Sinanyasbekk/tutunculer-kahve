@@ -19,32 +19,36 @@ const Header = () => {
           <p>ÖZENLE SEÇİLMİŞ KAHVE ÇEKİRDEKLERİ</p>
         </div>
       </div>
-      <div className="social-links">
-        <a
-          href="https://www.instagram.com/tutunculerkahve/?hl=tr"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaInstagram />
-        </a>
-        <a href="YOUR_FACEBOOK_URL" target="_blank" rel="noopener noreferrer">
-          <FaFacebookF />
-        </a>
-        <a
-          href="https://g.co/kgs/PvDN6KA"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaMapMarkerAlt />
-        </a>
-      </div>
 
       <div className="main-nav">
         <div className="nav-container">
+          {" "}
+          <div className="social-links">
+            <a
+              href="https://www.instagram.com/tutunculerkahve/?hl=tr"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaInstagram />
+            </a>
+            <a
+              href="YOUR_FACEBOOK_URL"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaFacebookF />
+            </a>
+            <a
+              href="https://g.co/kgs/PvDN6KA"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaMapMarkerAlt />
+            </a>
+          </div>
           <Link to="/" className="logo">
             <img src={logo} alt="Tütüncüler Kahve Logo" />
           </Link>
-
           <nav className="nav-links">
             <div onClick={() => navigate("/")}>ANA SAYFA</div>
 
