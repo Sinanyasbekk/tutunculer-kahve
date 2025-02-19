@@ -5,10 +5,10 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../Styles/products.css";
 import Header from "../Header";
-import h1 from "../Images/h1.jpeg";
-import h2 from "../Images/h2.jpeg";
-import h3 from "../Images/h3.jpeg";
-import h4 from "../Images/h4.png";
+import h1 from "../Images/hisarzade/h1.jpeg";
+import h2 from "../Images/hisarzade/h2.jpeg";
+import h3 from "../Images/hisarzade/h3.jpeg";
+import h4 from "../Images/hisarzade/h4.png";
 
 const Hisarzade = () => {
   const navigate = useNavigate();
@@ -114,3 +114,29 @@ const Hisarzade = () => {
 };
 
 export default Hisarzade;
+export const hisarzadeProducts = [
+  {
+    id: 1,
+    name: "Hisarzade",
+    category: "Hisarzade Kahve Kreması",
+    images: [h1, h1],
+  },
+  {
+    id: 2,
+    name: "Hisarzade",
+    category: "Hisarzade Gold Kahve",
+    images: [h2, h2],
+  },
+  {
+    id: 3,
+    name: "Hisarzade",
+    category: "Hisarzade Türk Kahvesi",
+    images: [h3, h3],
+  },
+  {
+    id: 4,
+    name: "Hisarzade",
+    category: "Hisarzade Menengiç Kahvesi",
+    images: [h4, h4],
+  },
+];

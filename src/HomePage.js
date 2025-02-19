@@ -1,12 +1,82 @@
 import React from "react";
-import Header from "./Header"; // Standard import
-import { Link } from "react-router-dom"; // Replace next/link
+import Header from "./Header";
+import { Link } from "react-router-dom";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import "./Styles/HomePage.css";
 import "./Styles/Footer.css";
 import antdibek from "./Images/antdibek.png";
 import dbakirdibek from "./Images/dbakirdibek.png";
 
+// Create the image context before using it
+const antepContext = require.context(
+  "./Images/antep",
+  false,
+  /\.(png|jpe?g|svg)$/
+);
+const diyarbakirContext = require.context(
+  "./Images/diyarbakir",
+  false,
+  /\.(png|jpe?g|svg)$/
+);
+const hisarzadeContext = require.context(
+  "./Images/hisarzade",
+  false,
+  /\.(png|jpe?g|svg)$/
+);
+
+// Import all images dynamically
+const importAll = (context) => {
+  const images = {};
+  context.keys().forEach((key) => {
+    const imageName = key.replace("./", "").replace(/\.(png|jpe?g|svg)$/, "");
+    images[imageName] = context(key);
+  });
+  return images;
+};
+
+// Create product arrays
+const antepImages = importAll(antepContext);
+const diyarbakirImages = importAll(diyarbakirContext);
+const hisarzadeImages = importAll(hisarzadeContext);
+
+const antepProducts = Object.keys(antepImages).map((key) => ({
+  image: antepImages[key],
+}));
+
+const diyarbakirProducts = Object.keys(diyarbakirImages).map((key) => ({
+  image: diyarbakirImages[key],
+}));
+
+const hisarzadeProducts = Object.keys(hisarzadeImages).map((key) => ({
+  image: hisarzadeImages[key],
+}));
+
 const HomePage = () => {
+  const sliderSettings = {
+    infinite: true,
+    speed: 1000,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
@@ -25,8 +95,16 @@ const HomePage = () => {
               </div>
               <div className="content-container">
                 <h1 className="title">Bir Gaziantep Markasıdır</h1>
-                {/* <p className="subtitle">Gaziantep'in Eşsiz Lezzeti.</p> */}
               </div>
+            </div>
+            <div className="carousel-container">
+              <Slider {...sliderSettings}>
+                {antepProducts.map((product, index) => (
+                  <div key={index} className="carousel-item">
+                    <img src={product.image} alt={product.name} />
+                  </div>
+                ))}
+              </Slider>
             </div>
           </div>
         </section>
@@ -34,10 +112,6 @@ const HomePage = () => {
         <section className="section">
           <div className="container">
             <div className="flex-container">
-              <div className="content-container left">
-                <h1 className="title">Bir Gaziantep Markasıdır</h1>
-                {/* <p className="subtitle">Gaziantep'in Eşsiz Lezzeti.</p> */}
-              </div>
               <div className="image-container">
                 <img
                   src={antdibek}
@@ -47,6 +121,18 @@ const HomePage = () => {
                   style={{ borderRadius: "0.5rem" }}
                 />
               </div>
+              <div className="content-container left">
+                <h1 className="title">Bir Gaziantep Markasıdır</h1>
+              </div>
+            </div>
+            <div className="carousel-container">
+              <Slider {...sliderSettings}>
+                {diyarbakirProducts.map((product, index) => (
+                  <div key={index} className="carousel-item">
+                    <img src={product.image} alt={product.name} />
+                  </div>
+                ))}
+              </Slider>
             </div>
           </div>
         </section>
@@ -65,8 +151,16 @@ const HomePage = () => {
               </div>
               <div className="content-container">
                 <h1 className="title">Bir Diyarbakır Markasıdır</h1>
-                {/* <p className="subtitle">Diyarbakir'in Eşsiz Lezzeti.</p> */}
               </div>
+            </div>
+            <div className="carousel-container">
+              <Slider {...sliderSettings}>
+                {hisarzadeProducts.map((product, index) => (
+                  <div key={index} className="carousel-item">
+                    <img src={product.image} alt={product.name} />
+                  </div>
+                ))}
+              </Slider>
             </div>
           </div>
         </section>

@@ -93,3 +93,25 @@
 .button:hover {
   background-color: rgba(0, 0, 0, 0.1);
 }
+
+.carousel-container {
+  position: absolute;
+  top: 5rem;
+  left: 20rem;
+  right: 0;
+  bottom: 0;
+  /* margin-top: 2rem;
+  padding: 5 10rem;
+  margin-left: 5rem; */
+}
+
+.carousel-item {
+  padding: 0 10px;
+}
+
+.carousel-item img {
+  width: 50%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
