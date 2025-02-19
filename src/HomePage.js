@@ -10,10 +10,7 @@ const HomePage = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-
-      {/* Main content */}
-      <main>
-        {/* Gaziantep Section */}
+      <main style={{ backgroundColor: "#ffe4c4" }}>
         <section className="section">
           <div className="container">
             <div className="flex-container">
@@ -28,19 +25,18 @@ const HomePage = () => {
               </div>
               <div className="content-container">
                 <h1 className="title">Bir Gaziantep Markasıdır</h1>
-                <p className="subtitle">Gaziantep'in Eşsiz Lezzeti.</p>
+                {/* <p className="subtitle">Gaziantep'in Eşsiz Lezzeti.</p> */}
               </div>
             </div>
           </div>
         </section>
 
-        {/* Gaziantep Section */}
         <section className="section">
           <div className="container">
             <div className="flex-container">
               <div className="content-container left">
                 <h1 className="title">Bir Gaziantep Markasıdır</h1>
-                <p className="subtitle">Gaziantep'in Eşsiz Lezzeti.</p>
+                {/* <p className="subtitle">Gaziantep'in Eşsiz Lezzeti.</p> */}
               </div>
               <div className="image-container">
                 <img
@@ -55,7 +51,6 @@ const HomePage = () => {
           </div>
         </section>
 
-        {/* Diyarbakir Section */}
         <section className="section">
           <div className="container">
             <div className="flex-container">
@@ -70,14 +65,13 @@ const HomePage = () => {
               </div>
               <div className="content-container">
                 <h1 className="title">Bir Diyarbakır Markasıdır</h1>
-                <p className="subtitle">Diyarbakir'in Eşsiz Lezzeti.</p>
+                {/* <p className="subtitle">Diyarbakir'in Eşsiz Lezzeti.</p> */}
               </div>
             </div>
           </div>
         </section>
       </main>
 
-      {/* Footer */}
       <footer className="footer">
         <div className="footer-container">
           <div className="copyright">

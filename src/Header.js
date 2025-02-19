@@ -50,7 +50,7 @@ const Header = () => {
             <img src={logo} alt="Tütüncüler Kahve Logo" />
           </Link>
           <nav className="nav-links">
-            <div onClick={() => navigate("/")}>ANA SAYFA</div>
+            <Link to="/">ANA SAYFA</Link>
 
             <div className="dropdown">
               <Link>ÜRÜNLERİMİZ</Link>

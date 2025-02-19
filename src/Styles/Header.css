@@ -1,12 +1,8 @@
 .header {
   position: relative;
-  /* background-image: url("https://cdn.dsmcdn.com/mrktng/seo/22nisan4/kafeinsiz-kahve-4.jpg"); */
-  color: black;
   background-color: #ffffff;
   background-size: contain;
-
   height: auto;
-
   display: flex;
   flex-direction: column;
 }
