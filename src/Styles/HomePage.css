@@ -1,7 +1,11 @@
 .section {
+  background-image: url("../Images/HPbg.png");
+  background-size: 40%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   width: 70%;
-  height: 50vh;
-  padding: 4rem 0;
+  height: 40vh;
+  padding: 5rem 0;
 }
 @media (min-width: 768px) {
   .section {
@@ -10,11 +14,11 @@
 }
 .container {
   position: relative;
-  left: 20%;
+  left: 30%;
   height: 30vh;
   margin: 0 auto;
   padding: 2rem 0;
-  border: 2px solid rgb(255, 255, 255);
+  border: 2px solid rgb(145, 127, 89);
   border-radius: 10px;
 }
 
