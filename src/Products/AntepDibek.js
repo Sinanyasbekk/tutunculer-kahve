@@ -34,7 +34,7 @@ const AntepDibek = () => {
   const closeModal = () => {
     setIsModalOpen(false);
   };
-  // Sample product data with images
+
   const products = [
     {
       id: 1,

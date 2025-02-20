@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "./Header";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -9,7 +9,6 @@ import "./Styles/Footer.css";
 import antdibek from "./Images/antdibek.png";
 import dbakirdibek from "./Images/dbakirdibek.png";
 
-// Create the image context before using it
 const antepContext = require.context(
   "./Images/antep",
   false,
@@ -26,7 +25,6 @@ const hisarzadeContext = require.context(
   /\.(png|jpe?g|svg)$/
 );
 
-// Import all images dynamically
 const importAll = (context) => {
   const images = {};
   context.keys().forEach((key) => {
@@ -36,7 +34,6 @@ const importAll = (context) => {
   return images;
 };
 
-// Create product arrays
 const antepImages = importAll(antepContext);
 const diyarbakirImages = importAll(diyarbakirContext);
 const hisarzadeImages = importAll(hisarzadeContext);
@@ -54,13 +51,20 @@ const hisarzadeProducts = Object.keys(hisarzadeImages).map((key) => ({
 }));
 
 const HomePage = () => {
+  const navigate = useNavigate();
   const sliderSettings = {
+    arrows: false,
     infinite: true,
     speed: 1000,
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 500,
+    pauseOnHover: true,
+    lazyLoad: "progressive",
+    cssEase: "linear",
+    useTransform: false,
+    waitForAnimate: false,
     responsive: [
       {
         breakpoint: 1024,
@@ -106,6 +110,12 @@ const HomePage = () => {
                 ))}
               </Slider>
             </div>
+            <div
+              className="button-container"
+              onClick={() => navigate("/AntepDibek")}
+            >
+              <div className="navigate-button">Keşfet</div>
+            </div>
           </div>
         </section>
 
@@ -134,6 +144,12 @@ const HomePage = () => {
                 ))}
               </Slider>
             </div>
+            <div
+              className="button-container"
+              onClick={() => navigate("/Hisarzade")}
+            >
+              <div className="navigate-button">Keşfet</div>
+            </div>
           </div>
         </section>
 
@@ -161,6 +177,12 @@ const HomePage = () => {
                   </div>
                 ))}
               </Slider>
+            </div>
+            <div
+              className="button-container"
+              onClick={() => navigate("/DiyarbakirDibek")}
+            >
+              <div className="navigate-button">Keşfet</div>
             </div>
           </div>
         </section>
